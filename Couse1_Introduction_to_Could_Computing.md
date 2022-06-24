@@ -249,7 +249,7 @@ Deployment models indicate:
     * Data & AI integration
     * Enhancing legacy apps
     * VMware migration
-    
+
 
  
 
@@ -258,7 +258,27 @@ Deployment models indicate:
 ## LESSON 1: Cloud Infrastructure
 
 ### Overview of cloud infrastructure
+* Cloud Region
+    * Multiple Availability Zone (AZ)
+    * Have their own power, cooling, networking resurces
+    * Isolation of zone improves the cloud's fault torerance, decreases latency and more
+    * Very high bandwidth connectivity with other AZs, data centers, internet
+* Data center is a huge room or a warehouse containing cloud infrastructure
+    * Standarized containers of computing resources, servers, storage, networking equipment
+* Coomputing Resources:
+    * Cloud providers offer several compute options - 
+        * Virtual Servers, 
+            * Most of the servers in a cloud datacenter run hypevisors to create VM
+            * Software based
+        * Bare Metal Servers, 
+            * Physical Servers that aren't virtualized
+            * Cutomers can provision VMs and bare metals servers as and when they need them and run their workloads on them
 
+        * Serverless computing resources
+            * An abstraction layer on top of virtual machines
+* Storage
+    * 
+    * 
 ### Virtualization and Virtual Machines explained
 
 ### Types of Virtual Machines
