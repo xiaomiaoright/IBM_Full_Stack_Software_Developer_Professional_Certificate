@@ -52,21 +52,21 @@ Cloud Computing as a Service (CssA) using technology as a service; leveraging re
 
 ## LESSON 2: Business case for Cloud Computing
 
-Video: Cloud adoption - No longer a choice
+### Cloud adoption - No longer a choice
 
-Video: Cloud adoption - Some case studies
+### Cloud adoption - Some case studies
 
-Reading: Lesson Summary
+ 
 
 ## LESSON 3: Emerging Technologies accelerated by cloud
 
-Video: Internet of Things on the cloud
+### Internet of Things on the cloud
 
-Video: Artificial Intelligence on the cloud
+### Artificial Intelligence on the cloud
 
-Video: Blockchain and Analytics on the cloud
+### Blockchain and Analytics on the cloud
 
-Reading: Lesson Summary
+ 
 
 # MODULE 2: Cloud Computing Models
 
@@ -195,46 +195,95 @@ Reading: Lesson Summary
 
 
 ## LESSON 2: Deployment Models
+Deployment models indicate:
 
-Video: Public Cloud
+* where tehe infrastructure resides
+* who owns and manages it
+* how cloud resources and services are made available to users
 
-Video: Private Cloud
+### Public Cloud
+* Providers owns, manages, provisions and maintains the infrastures
+* Users using web consoles and APIs, users can provision the resources and services they need
+    * Users do not own the servers their applications run on, or storage, or management operation
+    * user like utilities
+* Good
+    * Cost savings!
+    * esay scalibility
+* Bad
+    * use do not have any control over environment
+* Public cloud characteristics
+    * Multi tenants share computing resources
+    * On demand resources
+    * Economies of scale
+    * highly reliable
+* Concerns
+    * Security
+    * data soverignty compliance
 
-Video: Hybrid Cloud
 
-Reading: Lesson Summary
+### Private Cloud
+* cloud infrastructure provisioned for exclusive use by a signle organization comprising multiple consumers. Owned managed by the organization a third party or some combination of them. on off promisis
+
+* Internal Infras. on-premises, owned and managed by organization
+* external Infrs. owned managed by service provider
+* Virtual Private Cloud (VPC)
+    * An external cloud that offers a private secure, computing environment in a shared public cloud
+
+### Hybrid Cloud
+* Connects an organizations' on premise private cloud and third party public cloud
+* Felxibility
+* Workloads move freely
+* Choice of security and regulation features
+* Benefits:
+    * Interoperable
+        * Pub. Priv. clouds understand each other's APIs
+    * Scalable
+        * private clouds can leverage public cloud capacity
+    * Portable
+* Types of hybrid clouds
+    * Hybrid monocloud: one provider
+    * Hybrid multicloud
+    * Composite multicloud
+* Use cases:
+    * SaaS integration
+    * Data & AI integration
+    * Enhancing legacy apps
+    * VMware migration
+    
+
+ 
 
 # MODULE 3: Components of cloud computing
 
 ## LESSON 1: Cloud Infrastructure
 
-Video: Overview of cloud infrastructure
+### Overview of cloud infrastructure
 
-Video: Virtualization and Virtual Machines explained
+### Virtualization and Virtual Machines explained
 
-Video: Types of Virtual Machines
+### Types of Virtual Machines
 
-Video: Bare Metal Servers
+### Bare Metal Servers
 
-Video: Secure Cloud Networking
+### Secure Cloud Networking
 
-Video: Containers
+### Containers
 
-Reading: Lesson Summary
+ 
 
 ## LESSON 2: Cloud Storage and Content Delivery Networks
 
-Video: Basics of cloud storage
+### Basics of cloud storage
 
-Video: File Storage
+### File Storage
 
-Video: Block Storage
+### Block Storage
 
-Video: Object Storage Overview
+### Object Storage Overview
 
-Video: Object Storage - Tiers and APIs
+### Object Storage - Tiers and APIs
 
-Video: Content Delivery Networks
+### Content Delivery Networks
 
 Reading: Overview and Highlights
 
@@ -242,44 +291,44 @@ Reading: Overview and Highlights
 
 ## LESSON 1: Hybrid Multicloud, Micorservices, and Serverless
 
-Video: Hybrid Multicloud
+### Hybrid Multicloud
 
-Video: Microservices
+### Microservices
 
-Video: Serverless Computing
+### Serverless Computing
 
-Reading: Lesson Summary
+ 
 
 ## LESSON 2: Cloud Native, DevOps, and Application Modernization
 
-Video: Cloud Native
+### Cloud Native
 
-Video: DevOps on the cloud
+### DevOps on the cloud
 
-Video: Application Modernization
+### Application Modernization
 
-Reading: Lesson Summary
+ 
 
 # MODULE 5: Cloud Security and Monitoring, Case Studies, and Jobs
 
 ## LESSON 1: Cloud Security and Cloud Monitoring
 
-Video: What is cloud security - Part 1
+### What is cloud security - Part 1
 
-Video: What is cloud security - Part 2
+### What is cloud security - Part 2
 
-Video: Identity and Access Management
+### Identity and Access Management
 
-Video: Cloud encryption
+### Cloud encryption
 
-Video: Cloud monitoring - Basics and benefits
+### Cloud monitoring - Basics and benefits
 
-Reading: Lesson Summary
+ 
 
 ## LESSON 2: Case Studies and Job Roles
 
-Video: Case studies in different industry verticals
+### Case studies in different industry verticals
 
-Video: Career opportunities and job roles in cloud computing
+### Career opportunities and job roles in cloud computing
 
-Reading: Lesson Summary
+ 
