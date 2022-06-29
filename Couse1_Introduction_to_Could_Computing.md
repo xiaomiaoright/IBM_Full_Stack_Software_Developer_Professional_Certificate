@@ -277,36 +277,260 @@ Deployment models indicate:
         * Serverless computing resources
             * An abstraction layer on top of virtual machines
 * Storage
-    * 
-    * 
+    * Local storage: Default
+        * Any info stored in a local drive can be lost when you delete or decomission a cloud server
+    * Other cloud storage options
+        * Tpyes
+            * Block storage
+            * File storage
+            * Object storage
+        * Features:
+            * Block & File storage: traditional data centers
+                *  Often struggle with scale, performance, and distributed characteristics of clouds
+            * Obj storage: most common mode
+                * Highly distributed and resilient
+* Networking
+    * Traditonal hardwares: routers, swithces
+    * SDN: previsioned
+        * public 
+        * proviate interfaces
+    * Network interfaces in the clouds need:
+        * IP addresses
+        * subnets
+        * security groups
+        * ACLs
+        * VLANs
+        * Firewalls
+        * load balancers
+        * gateways
+        * traffic analyzers
+        * CDNs
+
+
+
 ### Virtualization and Virtual Machines explained
+* Hypervisor
+    * A piece of software that runs above the physical server or host
+    * Pull resources from physical server and allocate to vitual env.
+* Types of hypervisors
+    * Type 1 
+        * INstalled directly on top of physical server
+        * most frequently used, secure
+    * Type 2 (hosted)
+        * a layer of ost OS that sits between the physical server and the HV.
+        * less frequently
+* VM
+    * Software based computer
+    * Extremely portable
+* Benefits:
+    * Cost saving
+    * Agility and speed
+    * Lower your downtime
 
 ### Types of Virtual Machines
+* Shared or public cloud VMs
+    * Pre-defined sizes and configurations
+        * Cores
+        * RAM
+        * Storage
+            * Pricing options
+    * Transient or Spot VMS
+        * take adv. of unused capacity ina cloud data center
+        * Good for:
+            * non produc tion workloads
+            * testing& developing
+            * running stateless workloads, testing scalability
+            * running big data and HPC worloads at a low cost
+    * Reserved virtual serve instances
+        * reserve capacity resouces for future deployments          
+* Dedicated HOsts
+    * Signle tenant isolation
+    * Specify the data center and pod
+    * allows max control over workload placement
+    * used for meeting compliance & Regulatory requirements or lisencing terms
+
 
 ### Bare Metal Servers
+* Signle-tenant dedicated physical server
+* Cloud provider manages the server up to the OS
+* Customer is responsible for adminitersing and managing everything else on the server
+* Configuration 
+    * Preconfigured by cloud provider or custom-configured as per customer specifications
+        * Processors
+        * RAM
+        * Hard drives
+        * Specializaed components
+        * The OS
+        * Install HV and create own VMS
+        * Add GPUs
+* Charateristics
+    * Take longer to provision
+    * min to hrs
+    * more expensive than VMs
+    * only offered by some cloud providers
+
+* Workloads:
+    * Fully customizable/demanding env.
+    * Dedicated or long-term usage
+    * High performance computing
+    * Highly secure/isolated env.
+    * Good for HPC/Bigdata/GPU intensive/ERP/AI
+* Bare Metal servers vs. Virtual servers
+    * Customer need
+    * Bare Metal 
+        * Work best for CPU and I/O intensive workloads
+        * Excel with highest performance and security
+        * satisfy strict compliance requirements
+        * Offer complete flexibity contral and transparency
+        * Come with aded management and operational overhead
+
+    * VM
+        * Repidly provisioned
+        * provide an elastic & Scalable env
+        * Low cost to use
 
 ### Secure Cloud Networking
+* Cybersecurity threats
+    * Could network vs. on premise data centers
+        * Logical instances vs. physical devices
+        * Networking functions as a Service vs. Networking equipment in physical racks
+* How
+    * Define the size of the network using IP address range
+    * Cloud network deployed on networking spaces that are logically separated segments of the networks using options, including Virtual proviate cloud (VPC) that in turn can be divided into smaller segments called subnets
+        * Logically segmented cloud networks are private carveout of the cloud that offer customers the security of private clouds and the scalability of public clouds. Cloud resources, such as VMs or Virtual Server Instances (VSIs), storage, network connectivity and load balancers are deployed into subnets.
+        * Using subnets allows users to deploy enterprise applications using the same multi-tier concepts used in on-premises environments. 
+        * Subnets are also the main area where security is implemented in the cloud. 
+        * Every subnet is protected by Access Control Lists (ACLS) that serve as a subnet-level fire wall.
+        *  Within the subnet, one could create Security Groups that provide security at the instance level such as VSIs. 
+        * Once you build a subnet, then it is time to add some VSIs and storage to it so that you could run your applications. 
+* Direct Connectivity
 
 ### Containers
-
+* Containers do not need to include a guest OS in every instances because they leverage host OS
  
 
 ## LESSON 2: Cloud Storage and Content Delivery Networks
 
 ### Basics of cloud storage
+* Compute node vs. public/private
+* Cloud storage Host/Secure/Manage/Maintain infrustructure
+* Pay for what used
+* 4 types
+    * Direct Attached
+        * Local storage: within the same rack/fast/OS
+        * temporary ephemeral/not shared/not resilient
+    * File Storage
+        * NFS storage
+        * Connected to computing node
+        * Slower
+        * Lower cost
+        * attached to multiple servers
+    * Block Storage
+        * Read/write fast speed
+        * IOPS: how quickly can be read/written
+        * Persistence
+        * Snap short: a point in time image of the storage
+    * Object Storage
+        * access via API
+        * SLowest
+        * Cheapest
+        * Infinite size
+
 
 ### File Storage
-
+* LIke Directed attached storage, file storage has to be attached to a compute node to store data
+* Unlike direct storage:
+    * Less expensive
+    * more resilient to failure
+    * less disk management & maintenance for user
+    * Provision much larger amounts of storage
+* file sotrage is mounted from remote storage appliances
+    * Resilient to failure
+    * offer encryption
+    * managed by service provider
+* File storage mounted on compute nodes via ethernet networks
+    * File Storage is mounted to compute nodes via an ethernet network – the same kind of network that you might receive email or browse the internet over, although this ethernet network is normally dedicated to the task. 
+    * ‘Network Attached Storage’, ‘Network File Storage’   ‘NFS
+    * Speeds vary based on network traffice
+    * consistent speed cannot be guaranteed. Therefore, File storage tends to be used for workloads where consistently high network speeds are not a requirement. 
+* Multiple Compute Nodes
+    * mounted more than one compute node
+    * Common workloads
+        * Department file share
+        * Loading zone for incoming files
+        * Repository of files
+            * ie speed variance not issue
+        * Low cost database storage
+* IOPS
+    * speed at which the disk can write and read data
+    
 ### Block Storage
+* Block storage breaks files into chunks or blocks of data
+* Stores each block separately under a unique address
+* must be attached to a compute node
+* Features;
+    * Mounted from remote storage appliances
+    * extremely resilient to failure
+    * data is more secure
+* Mounted as a volume to compute nodes using a dedicated network of optical fibres
+    * signals move at the speed of light
+    * Higher price point
+    * for worklaods that need low latency
+    * only one compute node a time
+    * consistent high spped
+    * databases and mail servers
+    * not suitable for shared storage between multiple servers
+* IOPS
+    * SPecifify
+    * adjust as needed
+    * Depending on requirements and usage behaviors
 
+* Common attributes of file and block storage
+    * Block and file storage is taken from appliances which are maintained by the service provider
+    * Both are highly available and resilient
+    * Often include data encryption at rest and in transit
+ * Differences: file vs. block
+    * Attached via ethernet network vs. atached via high speed fibre network
+    * speed vary based on loads vs.
+    * can attach to multiple compute nodes at once vs. only attach to one node at a time
+    * Good for file shares(fast connectivity not required/cost sensitive) vs good for appplication require consistent fast access to disk
+    * workload IOPS required for both
 ### Object Storage Overview
-
+1. can be used without connecting to particular compute node to use it
+    * use API
+2. less expensive than other storages
+    * effectively infinite
+* When to use?
+    * large amount of unstructured state
+    * Bucket- meta data
+        * no need of sizing information
+        * add data slowly or quickly
+* Manageged by service provider
+* Resilience options
+    * only stored in one data centre vs. stored multiple times in different data centres
+* Store any types of data
+* Not suitable for operation systems, databases, changing content
 ### Object Storage - Tiers and APIs
+* Tiers/Classes based on how frequently the data is accessed
+* Standard tier bucket: frequently accessed data/high cost
+* Vault/archive tier: lower frequenct
+* Cold vault tier
+* automatic archiving rules
+* Speed: not IOPS options
+    * Slower
+* important to keep data in the correct tier
+* API, S3 API (AWS) S3 compatible - HTTP based RESTful
+* Back solutions/diaster recovery
+    * Replacement for offiste backups
+
 
 ### Content Delivery Networks
-
-Reading: Overview and Highlights
-
+* Driven by Object Storage 
+* distributed server network that delivers temporarily stored, or cached, copies of website content to users, based on the user's geographic location
+* Make website faster
+* reduction of load in the local server
+* local server increased uptime
+* increased security
 # MODULE 4: Emergent trends & practices
 
 ## LESSON 1: Hybrid Multicloud, Micorservices, and Serverless
